@@ -1,16 +1,16 @@
 {
   "name"          : "appcache-node",
-  "description"   : "",
+  "description"   : "autogenerate appcache manifest file on request",
   "url"           : "http://github.com/dpweb/appcache-node/",
   "keywords"      : ["util", "nodejs", "express", "web", "html5"],
   "author"        : "C Borkert <ILIKECHEESE@dpsw.info>",
   "dependencies": {
-		"express":"",
+        "express":"*"
   },
-  "main": "appcache.js",
+  "main": "index.js",
   "repository": {
-  	"type": "git",
-		"url": "git://github.com/dpweb/appcache-node.git"
+      "type": "git",
+      "url": "git://github.com/dpweb/appcache-node.git"
   },
-  "version"       : "0.0.1"
+  "version"       : "0.0.2"
 }
