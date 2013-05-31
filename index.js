@@ -3,8 +3,8 @@ void function(root){
 
     function appcache(options, app){
         options = options || {}
-        var lines = (options && options.files) || []
-            , path = (options && options.path) || 'app.cache'
+        var lines = options.files || []
+            , path = options.path || 'app.cache'
             , file
 
         lines.unshift('CACHE MANIFEST', '', 'CACHE:')
