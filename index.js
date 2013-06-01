@@ -13,7 +13,10 @@ void function(root){
 
         app.all(path, function(r, s){
             s.writeHead(200, {
-                  'Content-Type': 'text/cache-manifest'
+                'Content-Type': 'text/cache-manifest'
+                , 'Cache-Control':'no-cache'
+                , 'Cache-Control':'no-store'
+                , 'Cache-Control':'max-age: 0'
             })
             s.end(file)
         })
