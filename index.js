@@ -11,14 +11,13 @@ void function(root){
         lines.push('', '# ' + new Date())
         file = lines.join('\n')
 
-        app.all(path, function(r, s){
-            s.writeHead(200, {
-                'Content-Type': 'text/cache-manifest'
-                , 'Cache-Control':'no-cache'
-                , 'Cache-Control':'no-store'
-                , 'Cache-Control':'max-age: 0'
-            })
-            s.end(file)
+        app.all(path, function(req, res){
+            res.status(200)
+            res.set('Content-Type', 'text/cache-manifest')
+            res.set('Cache-Control', 'no-cache')
+            res.set('Cache-Control', 'no-store')
+            res.set('Cache-Control', 'max-age: 0')
+            res.end(file)
         })
         return file
     }
